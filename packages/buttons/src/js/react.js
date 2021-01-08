@@ -67,7 +67,7 @@ const AUbutton = ({ linkComponent, link, children, as, dark, type, block, classN
 	}
 	else {
 		return (
-			<button
+			<button aria-label="button"
 				type={ type }
 				className={ `au-btn ${ className } ${ options[ as ] }${ block ? ' au-btn--block' : '' }${ dark ? ' au-btn--dark' : '' }` }
 				{ ...attributeOptions }
