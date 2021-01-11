@@ -17,8 +17,9 @@ jobs:
           keys:
             - v1-node-cache-{{ checksum "package.json" }}
       - run:
-      - run: command: >
+          command: >
             sudo apt-get update
+      - run: 
           # https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
           name: Install packages for puppeteer
           command: >
