@@ -17,10 +17,11 @@ jobs:
           keys:
             - v1-node-cache-{{ checksum "package.json" }}
       - run:
+      - run: command: >
+            sudo apt-get update
           # https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
           name: Install packages for puppeteer
           command: >
-            sudo apt-get update \
             sudo apt-get install -yq --no-install-recommends
             gconf-service libasound2 libatk1.0-0 libatk-bridge2.0-0
             libcups2 libdbus-1-3
